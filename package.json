@@ -1,0 +1,63 @@
+{
+  "name": "alwaysai",
+  "description": "An alwaysAI command-line interface (CLI) for build tools",
+  "version": "0.0.0-0",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "bin": {
+    "alwaysai-build": "lib/index.js"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "build:clean": "rimraf lib && npm run build",
+    "build:watch": "tsc --project . --watch",
+    "lint": "tslint --project tsconfig.build.json",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "npm run lint && npm run test:unit && npm run build",
+    "test:unit": "jest --coverage src",
+    "test:watch": "npm run test:unit -- --watch",
+    "preversion": "npm test && npm run build:clean",
+    "postversion": "npm publish"
+  },
+  "dependencies": {
+    "@alwaysai/always-cli": "0.0.0-9",
+    "@alwaysai/build": "0.0.0-0",
+    "@alwaysai/codecs": "0.0.0-2"
+  },
+  "devDependencies": {
+    "@alwaysai/tsconfig": "0.0.0",
+    "@alwaysai/tslint-config": "0.0.3",
+    "@types/jest": "24.0.11",
+    "@types/node": "11.13.4",
+    "jest": "24.7.1",
+    "rimraf": "2.6.3",
+    "ts-jest": "24.0.2",
+    "ts-node": "8.0.3",
+    "tslint": "5.15.0",
+    "typescript": "3.4.3"
+  },
+  "files": [
+    "src",
+    "lib",
+    "assets"
+  ],
+  "keywords": [
+    "alwaysai",
+    "typescript",
+    "nodejs",
+    "cli",
+    "command",
+    "line",
+    "interface"
+  ],
+  "author": {
+    "name": "alwaysAI, Inc.",
+    "email": "contact@alwaysai.co"
+  },
+  "repository": "github:alwaysai/build-cli",
+  "homepage": "https://github.com/alwaysai/build-cli#readme",
+  "license": "MIT"
+}
