@@ -1,6 +1,6 @@
-# alwaysai [![Build Status](https://travis-ci.com/alwaysai/cli.svg?branch=master)](https://travis-ci.com/alwaysai/cli)
+# @alwaysai/build-cli [![Build Status](https://travis-ci.com/alwaysai/build-cli.svg?branch=master)](https://travis-ci.com/alwaysai/build-cli)
 
-The alwaysAI command-line interface (CLI). This package includes runtime JavaScript files suitable for Node.js >=8 as well as the corresponding TypeScript type declarations. This software should be considered a "pre-alpha" release.
+This package includes runtime JavaScript files suitable for Node.js >=8 as well as the corresponding TypeScript type declarations. This software should be considered a "pre-alpha" release.
 
 ## Usage
 ## API
