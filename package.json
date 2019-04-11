@@ -1,6 +1,6 @@
 {
-  "name": "alwaysai",
-  "description": "An alwaysAI command-line interface (CLI) for build tools",
+  "name": "@alwaysai/build-cli",
+  "description": "An alwaysAI command-line interface (CLI) build tool",
   "version": "0.0.0-0",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -19,7 +19,7 @@
     "test": "npm run lint && npm run test:unit && npm run build",
     "test:unit": "jest --coverage src",
     "test:watch": "npm run test:unit -- --watch",
-    "preversion": "npm test && npm run build:clean",
+    "preversion": "npm test && npm run build:clean && alwaysai-build gitInfoFile create",
     "postversion": "npm publish"
   },
   "dependencies": {
