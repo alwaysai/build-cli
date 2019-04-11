@@ -1,13 +1,15 @@
 #!/usr/bin/env node
 
-import { createBranch, createCli, runAndExit } from '@alwaysai/always-cli';
+import { createCli, runAndExit, createLeaf } from '@alwaysai/always-cli';
+import { GitInfoFile } from '@alwaysai/build';
 
-import { gitInfoFile } from './git-info-file';
-
-const root = createBranch({
+const root = createLeaf({
   name: 'alwaysai-build',
   description: 'An alwaysAI CLI build tool',
-  subcommands: [gitInfoFile],
+  action() {
+    const gitInfoFile = GitInfoFile(process.cwd());
+    gitInfoFile.write();
+  },
 });
 
 export const cli = createCli(root);
