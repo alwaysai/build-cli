@@ -24,8 +24,9 @@
   },
   "dependencies": {
     "@alwaysai/always-cli": "0.0.0-9",
-    "@alwaysai/build": "0.0.0-1",
-    "@alwaysai/codecs": "0.0.0-2"
+    "@alwaysai/build": "0.0.0-2",
+    "@alwaysai/codecs": "0.0.0-3",
+    "io-ts": "1.8.5"
   },
   "devDependencies": {
     "@alwaysai/tsconfig": "0.0.0",
@@ -35,7 +36,7 @@
     "jest": "24.7.1",
     "rimraf": "2.6.3",
     "ts-jest": "24.0.2",
-    "ts-node": "8.0.3",
+    "ts-node": "8.1.0",
     "tslint": "5.15.0",
     "typescript": "3.4.3"
   },
