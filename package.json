@@ -19,7 +19,7 @@
     "test": "npm run lint && npm run test:unit && npm run build",
     "test:unit": "jest --coverage src",
     "test:watch": "npm run test:unit -- --watch",
-    "preversion": "npm test && npm run build:clean && alwaysai-build gitInfoFile create",
+    "preversion": "npm test && npm run build:clean && node lib",
     "postversion": "npm publish"
   },
   "dependencies": {
