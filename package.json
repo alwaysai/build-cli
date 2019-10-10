@@ -45,7 +45,8 @@
   "files": [
     "src",
     "lib",
-    "alwaysai.git.json"
+    "alwaysai.git.json",
+    "package-lock.json"
   ],
   "keywords": [
     "alwaysai",
