@@ -23,10 +23,10 @@
     "postversion": "npm publish"
   },
   "dependencies": {
-    "@alwaysai/alwayscli": "0.2.0",
+    "@alwaysai/alwayscli": "0.3.0",
     "@alwaysai/build": "0.0.0-2",
     "@alwaysai/codecs": "0.0.0",
-    "@carnesen/run-and-catch": "0.0.0",
+    "@carnesen/run-and-catch": "0.1.0",
     "fp-ts": "2.1.0",
     "io-ts": "2.0.1"
   },
