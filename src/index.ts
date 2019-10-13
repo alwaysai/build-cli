@@ -1,19 +1,18 @@
 #!/usr/bin/env node
 
-import { createCli, runAndExit, createLeaf } from '@alwaysai/always-cli';
+import { CliLeaf, runCliAndExit } from '@alwaysai/alwayscli';
 import { GitInfoFile } from '@alwaysai/build';
 
-const root = createLeaf({
+export const root = CliLeaf({
   name: 'alwaysai-build',
-  description: 'An alwaysAI CLI build tool',
+  description: 'Write a git info file to your current working directory',
   action() {
     const gitInfoFile = GitInfoFile(process.cwd());
     gitInfoFile.write();
+    return `Wrote ${gitInfoFile.path}`;
   },
 });
 
-export const cli = createCli(root);
-
 if (module === require.main) {
-  runAndExit(cli, ...process.argv.slice(2));
+  runCliAndExit(root);
 }

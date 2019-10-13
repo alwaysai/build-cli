@@ -23,28 +23,30 @@
     "postversion": "npm publish"
   },
   "dependencies": {
-    "@alwaysai/always-cli": "0.0.0-9",
+    "@alwaysai/alwayscli": "0.3.0",
     "@alwaysai/build": "0.0.0-2",
     "@alwaysai/codecs": "0.0.0",
-    "fp-ts": "2.0.5",
+    "@carnesen/run-and-catch": "0.1.0",
+    "fp-ts": "2.1.0",
     "io-ts": "2.0.1"
   },
   "devDependencies": {
     "@alwaysai/tsconfig": "0.0.0",
     "@alwaysai/tslint-config": "0.0.3",
     "@types/jest": "24.0.18",
-    "@types/node": "12.7.5",
+    "@types/node": "12.7.12",
     "jest": "24.9.0",
     "rimraf": "3.0.0",
     "ts-jest": "24.1.0",
-    "ts-node": "8.3.0",
+    "ts-node": "8.4.1",
     "tslint": "5.20.0",
-    "typescript": "3.6.3"
+    "typescript": "3.6.4"
   },
   "files": [
     "src",
     "lib",
-    "alwaysai.git.json"
+    "alwaysai.git.json",
+    "package-lock.json"
   ],
   "keywords": [
     "alwaysai",
